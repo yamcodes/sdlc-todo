@@ -10,7 +10,7 @@ description: >-
 
 Write one draft intent. Do not write a spec, a plan, or application code.
 
-Do not put an author, a time, or a status in the file. The author and the time come from git history. The product owner chooses accept or reject in the `review-intent` skill. That skill merges the review or closes it.
+Do not put an author, a time, or a status in the file. The author and the time come from git history. The product owner chooses accept or reject in the `review-intent` skill. That skill shows the exact lines, then merges or closes only when git will record Maya Shah.
 
 ## Steps
 
@@ -18,7 +18,7 @@ Do not put an author, a time, or a status in the file. The author and the time c
 2. Choose the next free number and write `intent/NNN-short-name.md`.
 3. Read [TEMPLATE.md](references/TEMPLATE.md) and fill it. Put anything unknown under Open questions. Do not invent it.
 4. Do not add an author line, a date, a decision, or a status.
-5. Stop. The originator corrects the file. The product owner reviews it with the `review-intent` skill. That skill asks them to accept or reject, then merges or closes the review.
+5. Stop. The originator corrects the file. The product owner reviews it with the `review-intent` skill. That skill shows the exact lines, asks them to accept or reject, then merges or closes only when git will record Maya Shah.
 
 ## Problem versus outcome
 
