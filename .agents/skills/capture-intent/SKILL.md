@@ -12,8 +12,38 @@ Write one draft intent. Leave it for Maya Shah to accept. Do not write a spec, a
 
 ## Steps
 
-1. If the problem, outcome, users, or constraints are still vague, ask those questions first. Use the originator's words.
+1. If the problem, outcome, users, or constraints are still vague, ask those questions first. Use the originator's words. The problem question is what they cannot do today. "It is missing" is not an answer.
 2. Choose the next free number and write `intent/NNN-short-name.md`.
 3. Read [TEMPLATE.md](references/TEMPLATE.md) and fill it. Put anything unknown under Open questions. Do not invent it.
 4. Set `Status: draft`. Leave Decision empty.
 5. Stop. The originator corrects the file. Maya accepts or rejects it in a later step.
+
+## Problem versus outcome
+
+Problem is the pain in the author's own words: what they cannot do today. Not the implementation, and not the fact that the repo is empty.
+
+A line that only says the app or repo is missing is not a problem. That is true of any empty repo. When the author says that, look at the outcome. If the outcome already names the pain, put that pain under Problem. Leave Proposed outcome as the observable result, not a second copy of the pain.
+
+Bad:
+
+```markdown
+## Problem
+
+The entire app is missing.
+
+## Proposed outcome
+
+A basic hello world first, just to see that it is working.
+```
+
+Good:
+
+```markdown
+## Problem
+
+We need to prove that a basic hello world runs before anyone builds the rest of the app.
+
+## Proposed outcome
+
+A basic hello world, just to see that it is working.
+```
