@@ -23,6 +23,19 @@ The end state is that accepting an artifact starts the next pass. Until that job
 
 The author of an intent does not accept it. One person accepts each file. The other may comment.
 
+## Roles
+
+The playbook's names. A roster maps them to people outside this file.
+
+| Role | What they do |
+| --- | --- |
+| Originator | Describes the problem in their own words. Does not accept the intent. |
+| Product owner | Accepts the intent and the spec. Needs no engineering skill. |
+| Technical lead | Consulted when a spec is classed as higher risk. Accepts a plan the organization classes as higher risk. The playbook also says tech lead or architect. |
+| Engineer | Writes the plan and the code. Accepts a routine plan. Reviews a pull request they did not write. |
+| Policy owner | Owns one policy skill. The product owner resolves a flagged concern with them before engineering sees the spec. |
+| Service owner | Triages a production finding and routes a product-facing one to the product owner. The playbook also says on-call. |
+
 ## Where files live
 
 - Each change: `changes/NNN-short-name/`. The capture-intent skill writes `intent.md` there.
