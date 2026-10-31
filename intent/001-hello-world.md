@@ -1,6 +1,6 @@
 # Intent: hello world
 
-Status: draft
+Status: accepted
 
 ## Problem
 
