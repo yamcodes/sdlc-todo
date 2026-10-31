@@ -14,7 +14,47 @@ Working notes for the playbook live in `.agents/references/ai-native-sdlc.md`. `
 | Nora Berg | Engineer | A pull request she did not write | Does the diff match the accepted plan, and do the checks pass? |
 | Amir Haddad | Engineer | A pull request he did not write | Does the diff match the accepted plan, and do the checks pass? |
 
-Maya and Leo both own the product. They accept different artifacts. One person accepts each file. The other can comment, and does not add a second approval on the same file.
+Maya owns the product decisions: the intent, and the spec. Leo accepts the plan, and she consults him only when she classes a spec as higher risk. One person accepts each file. The other can comment, and does not add a second approval on the same file.
+
+The playbook's definitions are in `.agents/references/ai-native-sdlc.md`. On this team they map like this.
+
+| Playbook role | Who |
+| --- | --- |
+| Originator | Whoever has the idea |
+| Product owner | Maya Shah |
+| Technical lead | Leo Martins |
+| Engineer | Sam Okonkwo, Nora Berg, Amir Haddad |
+| Policy owner | Nobody named yet |
+| Service owner | Nobody named yet |
+
+The playbook lets the engineer accept a routine plan, and sends a higher-risk plan to the technical lead. Here Leo accepts every plan.
+
+## Who does what
+
+```mermaid
+flowchart TD
+  idea[Anyone describes the idea]
+  intent[Maya accepts intent.md]
+  spec[Agent writes spec.md]
+  specOk[Maya accepts spec.md]
+  plan[An engineer writes plan.md]
+  planOk[Leo accepts plan.md]
+  code[That engineer writes the code]
+  pr[Sam, Nora, or Amir accepts the pull request]
+  again[A breach comes back to Maya as a new intent]
+  idea --> intent --> spec --> specOk --> plan --> planOk --> code --> pr --> again
+  again --> idea
+```
+
+Today Maya asks for the spec after she accepts the intent. Later, that merge starts the draft on its own, and her first look is the spec review. That job does not exist yet. Leo joins the spec only when she classes the change as higher risk.
+
+| Step | Drafted by | Accepted by |
+| --- | --- | --- |
+| Plan | The person with the idea | Maya |
+| Design | The agent, from the accepted intent | Maya. Leo only if she classes it higher risk |
+| Build | An engineer writes `plan.md`, then the code | Leo, before any code |
+| Test and Deploy | The pull request | Sam, Nora, or Amir, if they did not write the change |
+| Maintain | A breach, as a new intent | Maya, the same way as any other intent |
 
 ## One repo
 
