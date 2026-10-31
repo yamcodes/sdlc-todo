@@ -2,9 +2,11 @@
 
 One product, one repo. Each change lives in `changes/NNN-short-name/`, starting with `intent.md`. `spec.md` and `plan.md` join that folder after their gates. Application code stays at the repo root.
 
+This repo is a practice product for the AI-native SDLC, and it is also where the reusable skills and notes are written. `.agents/skills/` and `.agents/references/` must stay general: playbook roles only (originator, product owner, tech lead, an engineer who did not write the change), no team names, and no facts that are true only of this practice. The roster for this product lives in this file and in `README.md`. Copy the skills and the reference into the next project as they are. Do not copy the roster with them.
+
 ## Playbook
 
-Read `.agents/references/ai-native-sdlc.md` before fetching the AI-native SDLC playbook. That file is the working notes for this repo: stages, artifacts, and who accepts each one.
+Read `.agents/references/ai-native-sdlc.md` before fetching the AI-native SDLC playbook. That file is the working notes for any product repo: stages, artifacts, and which role accepts each one.
 
 ## People
 
