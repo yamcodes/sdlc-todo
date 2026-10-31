@@ -2,7 +2,7 @@
 
 A dummy TODO app for practicing the AI-native SDLC on one product. There is no application code yet. That is intentional.
 
-Working notes for the playbook live in `.agents/references/ai-native-sdlc.md`. `AGENTS.md` and `CLAUDE.md` point agents there. The playbook text in this repo is `docs/the-ai-native-sdlc-playbook.md`. Read that file. Do not fetch the article.
+Working notes for the playbook live in `.agents/references/ai-native-sdlc.md`. `AGENTS.md` and `CLAUDE.md` point agents there. The official article stays at [The AI-native SDLC playbook](https://claude.com/resources/articles/the-ai-native-sdlc-playbook).
 
 ## People
 

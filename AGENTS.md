@@ -6,7 +6,7 @@ This repo is a practice product for the AI-native SDLC, and it is also where the
 
 ## Playbook
 
-Read `.agents/references/ai-native-sdlc.md` before the playbook. That file is the working notes for any product repo: stages, artifacts, and which role accepts each one. If a question is about how a play is executed and those notes do not contain the steps, read `docs/the-ai-native-sdlc-playbook.md` and answer from that file. Do not fetch the article.
+Read `.agents/references/ai-native-sdlc.md` before fetching the AI-native SDLC playbook. That file is the working notes for any product repo: stages, artifacts, and which role accepts each one. If a question is about how a play is executed and those notes do not contain the steps, fetch [the playbook](https://claude.com/resources/articles/the-ai-native-sdlc-playbook) and answer from that page.
 
 Design starts when Maya opens a session on an accepted intent, with the skills available, and asks for the spec. It does not start inside the accept step. A job that drafts the spec when the intent merges comes only after that hand pass is a skill.
 

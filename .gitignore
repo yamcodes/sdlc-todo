@@ -1,2 +1,6 @@
 .DS_Store
 node_modules
+
+# Machine-local only. Not part of the product.
+.local/
+.cursor/rules/local-playbook.mdc

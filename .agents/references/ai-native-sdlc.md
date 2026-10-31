@@ -1,6 +1,6 @@
 # AI-native SDLC
 
-Working notes for a product repo. The source is `docs/the-ai-native-sdlc-playbook.md`. Read this file first. Read that copy when a question is not answered here. Do not fetch the article.
+Working notes for a product repo. The source is [The AI-native SDLC playbook](https://claude.com/resources/articles/the-ai-native-sdlc-playbook) (Anthropic). Read this file before fetching that page. Fetch it only when a question is not answered here.
 
 These notes name the stages, artifacts, and gates. They are not the playbook text. People are roles. The project roster lives outside this file.
 
