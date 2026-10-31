@@ -10,7 +10,7 @@ description: >-
 
 Write one draft intent and leave `Status: draft`. Do not write a spec, a plan, or application code.
 
-Do not put an author or a time in the file. Both come from git history. Do not record an acceptance in the file. Maya Shah sends the intent into Design by merging it. She rejects it by closing the review.
+Do not put an author or a time in the file. Both come from git history. Leave `Status: draft`. Maya Shah sets `Status: accepted` later, through the `review-intent` skill, and then merges. She rejects by closing the review.
 
 ## Steps
 
@@ -18,7 +18,7 @@ Do not put an author or a time in the file. Both come from git history. Do not r
 2. Choose the next free number and write `intent/NNN-short-name.md`.
 3. Read [TEMPLATE.md](references/TEMPLATE.md) and fill it. Put anything unknown under Open questions. Do not invent it.
 4. Set `Status: draft`. Leave it there. Do not add an author line, a decision, or `Status: accepted`.
-5. Stop. The originator corrects the file. Maya accepts by merging, or rejects by closing the review.
+5. Stop. The originator corrects the file. Maya reviews it with the `review-intent` skill. She sets `Status: accepted` and merges, or she rejects by closing the review and leaving `Status: draft`.
 
 ## Problem versus outcome
 

@@ -24,6 +24,6 @@ Intent, spec, plan, and code live here. A second repo is for when one intent has
 
 1. Describe the idea and ask for an intent. The `capture-intent` skill in `.agents/skills/capture-intent/` writes `intent/NNN-short-name.md` from `references/TEMPLATE.md`.
 2. The person who had the idea corrects anything the draft got wrong. It stays `Status: draft`. The author and the time come from git history.
-3. Maya accepts by merging, or rejects by closing the review. Do not record that in the file.
+3. Maya reviews the open pull request with the `review-intent` skill in `.agents/skills/review-intent/`. She writes her answers into the file, sets `Status: accepted`, and then merges. She rejects by closing the review and leaving `Status: draft`. The author and the time come from git history.
 4. Only after that merge does an agent draft `spec.md`.
 5. Leo accepts a plan before any application code is written.

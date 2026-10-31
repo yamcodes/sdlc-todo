@@ -37,7 +37,7 @@ Names below are the playbook's menu. The one-line note is how this repo uses eac
 
 ### Plan
 
-- **Capture as intent.** The originator describes the problem in their own words. The capture-intent skill writes a draft with `Status: draft`. Maya accepts by merging, or rejects by closing the review. The author and the time come from git history. Open questions stay open.
+- **Capture as intent.** The originator describes the problem in their own words. The capture-intent skill writes a draft with `Status: draft`. Maya reviews it with the review-intent skill, writes her product answers into the file, sets `Status: accepted`, and merges. Technical questions stay open for Leo. She rejects by closing the review and leaving `Status: draft`. The author and the time come from git history.
 
 ### Design
 

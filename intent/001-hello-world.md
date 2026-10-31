@@ -8,7 +8,7 @@ We need to prove that a basic hello world runs before anyone builds the rest of 
 
 ## Proposed outcome
 
-A basic hello world, just to see that it is working.
+A basic hello world as a page in the browser, just to see that it is working.
 
 ## Affected users and systems
 
@@ -20,5 +20,4 @@ Use the simplest way to get it done. Use a tech stack that is simple but still h
 
 ## Open questions
 
-- What does "see that it is working" mean: a page in a browser, a command that prints hello, or something else?
 - Which JavaScript or TypeScript stack, given it should be the simplest one that still holds up in 2026?
