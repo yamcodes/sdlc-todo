@@ -37,7 +37,7 @@ Names below are the playbook's menu. The one-line note is how this repo uses eac
 
 ### Plan
 
-- **Capture as intent.** The originator describes the problem in their own words. The capture-intent skill writes a draft. Maya reviews it with the review-intent skill, writes her product answers into the file, and approves the exact lines. Merging accepts it and lets Design start. That merge is recorded as Maya Shah, or it does not happen. Closing the review rejects it. Technical questions stay open for Leo. The author and the time come from git history. The file has no status field.
+- **Capture as intent.** The originator describes the problem in their own words. The capture-intent skill writes a draft. Maya reviews it with the review-intent skill, writes her product answers into the file, and approves the exact lines. Merging accepts it and lets Design start. The change is not built yet. Closing the review rejects it. Technical questions stay open for Leo. The author and the time come from git history. The file has no status field.
 
 ### Design
 
