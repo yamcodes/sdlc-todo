@@ -14,7 +14,7 @@ Read `.agents/references/ai-native-sdlc.md` before fetching the AI-native SDLC p
 
 ## Intent
 
-New ideas are written with the `capture-intent` skill in `.agents/skills/capture-intent/`. Maya Shah reviews the file with the `review-intent` skill in `.agents/skills/review-intent/` and writes her answers into it. Merging accepts it. Closing the review rejects it. The author and the time come from git history. The file has no status field.
+New ideas are written with the `capture-intent` skill in `.agents/skills/capture-intent/`. When Maya Shah asks to see all intents, or all open intents, the `list-intents` skill in `.agents/skills/list-intents/` reads the pull requests and the default branch. She reviews one file with the `review-intent` skill in `.agents/skills/review-intent/` and writes her answers into it. Merging accepts it. Closing the review rejects it. The author and the time come from git history. The file has no status field.
 
 ## Before any application code
 
