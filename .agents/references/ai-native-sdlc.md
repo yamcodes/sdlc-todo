@@ -8,6 +8,8 @@ These notes name the stages, artifacts, and gates. They are not the playbook tex
 
 Work moves Plan, Design, Build, Test, Deploy, Maintain, then back to Plan. Each stage ends by committing one artifact. The next stage starts by reading it. A person accepts the artifact before the next stage starts. An agent may draft, investigate, implement, and check. An agent does not accept.
 
+The end state is that accepting an artifact starts the next pass. Until that job exists, a person prompts the next pass by hand. For Design, that person is the product owner.
+
 ## Who accepts what here
 
 | Stage | Artifact | Accepts | Question |
@@ -41,7 +43,7 @@ Names below are the playbook's menu. The one-line note is how this repo uses eac
 
 ### Design
 
-- **Requirements and design.** After the product owner accepts the intent, an agent drafts the spec from that file. The product owner checks that it solves the stated problem. The tech lead checks technical risk before anyone writes a plan. Policy belongs in skills, applied while the spec is written.
+- **Requirements and design.** The product owner does not write the spec. By hand, the product owner opens a session where the organization's skills are available, points at the accepted `intent.md`, names the constraints, and asks for flagged concerns. The agent writes `spec.md` beside that intent and stops. The product owner reviews it against the idea, resolves each flagged concern with its policy owner before engineering sees the spec, and decides whether it progresses to build. The tech lead is consulted when the organization classes the change as higher risk. Accepting the spec is what starts the plan. The same prompt is later an organization command. Only after that does merging `intent.md` start a job that opens `spec.md` as a pull request. That job does not exist until the hand pass has been codified. Policy belongs in skills, applied while the spec is written.
 
 ### Build
 
@@ -73,4 +75,4 @@ Names below are the playbook's menu. The one-line note is how this repo uses eac
 
 ## What an agent does next
 
-On a new idea, run capture-intent and stop. When the product owner asks to see intents, run list-intents and stop. On an intent the product owner has merged, with no spec, draft the spec and stop for the product owner and the tech lead. On an accepted spec with no plan, draft the plan and stop for the tech lead. On an accepted plan, implement only that plan.
+On a new idea, run capture-intent and stop. When the product owner asks to see intents, run list-intents and stop. When the product owner opens a session on an accepted intent and asks for the spec, draft `spec.md` from that file, apply the skills, flag concerns, and stop for their review. Do not draft a spec in the same turn as accepting the intent. Do not draft one because the intent merged, until a merge job exists. On an accepted spec with no plan, draft the plan and stop for the tech lead. On an accepted plan, implement only that plan.

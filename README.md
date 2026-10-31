@@ -25,5 +25,5 @@ Each change lives in `changes/NNN-short-name/`, starting with `intent.md`. `spec
 1. Describe the idea and ask for an intent. The `capture-intent` skill in `.agents/skills/capture-intent/` writes `changes/NNN-short-name/intent.md` from `references/TEMPLATE.md`.
 2. The person who had the idea corrects anything the draft got wrong. The author and the time come from git history. The file has no status field.
 3. Maya asks to see all intents, or all open intents. The `list-intents` skill in `.agents/skills/list-intents/` reads the pull requests and the default branch. She reviews one file with the `review-intent` skill in `.agents/skills/review-intent/`. She writes her answers into the file. Merging accepts it. Closing the review rejects it.
-4. Only after that merge does an agent draft `spec.md` in the same change folder.
+4. Maya then opens a session in this repo, with the skills available, and points at the accepted intent. She asks for `spec.md` and for concerns to be flagged. She reviews that file. She does not write it. A merge-triggered spec job comes only after that hand pass is a skill.
 5. Leo accepts a plan before any application code is written.
