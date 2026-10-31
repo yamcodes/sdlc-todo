@@ -8,8 +8,8 @@ Working notes for the playbook live in `.agents/references/ai-native-sdlc.md`. `
 
 | Name | Role | Accepts | Question they answer |
 | --- | --- | --- | --- |
-| Maya Shah | Product manager | `intent.md`, then the product half of `spec.md` | Does this solve the right problem? |
-| Leo Martins | Tech lead | The technical half of `spec.md`, then `plan.md` | Is this safe to build, and does the plan prove it? |
+| Maya Shah | Product manager | `intent.md`, then `spec.md` | Does this solve the right problem? |
+| Leo Martins | Tech lead | A spec Maya classes as higher risk, then `plan.md` | Is this higher-risk spec sound, and does the plan prove it? |
 | Sam Okonkwo | Engineer | A pull request he did not write | Does the diff match the accepted plan, and do the checks pass? |
 | Nora Berg | Engineer | A pull request she did not write | Does the diff match the accepted plan, and do the checks pass? |
 | Amir Haddad | Engineer | A pull request he did not write | Does the diff match the accepted plan, and do the checks pass? |
@@ -25,5 +25,5 @@ Each change lives in `changes/NNN-short-name/`, starting with `intent.md`. `spec
 1. Describe the idea and ask for an intent. The `capture-intent` skill in `.agents/skills/capture-intent/` writes `changes/NNN-short-name/intent.md` from `references/TEMPLATE.md`.
 2. The person who had the idea corrects anything the draft got wrong. The author and the time come from git history. The file has no status field.
 3. Maya asks to see all intents, or all open intents. The `list-intents` skill in `.agents/skills/list-intents/` reads the pull requests and the default branch. She reviews one file with the `review-intent` skill in `.agents/skills/review-intent/`. She writes her answers into the file. Merging accepts it. Closing the review rejects it.
-4. Maya then opens a session in this repo, with the skills available, and points at the accepted intent. She asks for `spec.md` and for concerns to be flagged. She reviews that file. She does not write it. A merge-triggered spec job comes only after that hand pass is a skill.
+4. Maya opens a session on the accepted intent and asks for the spec. The `draft-spec` skill in `.agents/skills/draft-spec/` writes `changes/NNN-short-name/spec.md` and stops. She reviews that file with the `review-spec` skill in `.agents/skills/review-spec/`. She does not write it. Merging accepts it. Closing the review rejects it. Leo is consulted when she classes the change as higher risk. A merge-triggered spec job comes only after this hand pass.
 5. Leo accepts a plan before any application code is written.

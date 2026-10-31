@@ -8,12 +8,12 @@ This repo is a practice product for the AI-native SDLC, and it is also where the
 
 Read `.agents/references/ai-native-sdlc.md` before fetching the AI-native SDLC playbook. That file is the working notes for any product repo: stages, artifacts, and which role accepts each one. If a question is about how a play is executed and those notes do not contain the steps, fetch [the playbook](https://claude.com/resources/articles/the-ai-native-sdlc-playbook) and answer from that page.
 
-Design starts when Maya opens a session on an accepted intent, with the skills available, and asks for the spec. It does not start inside the accept step. A job that drafts the spec when the intent merges comes only after that hand pass is a skill.
+Design starts when Maya opens a session on an accepted intent and asks for the spec. The `draft-spec` skill in `.agents/skills/draft-spec/` writes `spec.md` beside that intent and stops. She reviews it with the `review-spec` skill in `.agents/skills/review-spec/`. Merging accepts it and lets the plan start. The change is not built yet. Closing the review rejects it. Leo Martins is consulted when she classes the change as higher risk. A job that runs `draft-spec` when the intent merges comes only after this hand pass. It does not exist yet.
 
 ## People
 
 - Maya Shah, product manager. Accepts the intent, and whether the spec solves the stated problem.
-- Leo Martins, tech lead. Accepts the technical risks in the spec, and the plan, before code.
+- Leo Martins, tech lead. Consulted when Maya classes a spec as higher risk. Accepts the plan, before code.
 - Sam Okonkwo, Nora Berg, and Amir Haddad, engineers. One of them reviews a pull request only if they did not write the change.
 
 ## Intent

@@ -15,7 +15,7 @@ The end state is that accepting an artifact starts the next pass. Until that job
 | Stage | Artifact | Accepts | Question |
 | --- | --- | --- | --- |
 | Plan | `changes/NNN-short-name/intent.md` | Product owner | Does this solve the right problem? |
-| Design | `spec.md` in that same folder | Product owner on the product half. Tech lead on the technical risks. | Does the spec solve the stated problem, and is it safe to build? |
+| Design | `spec.md` in that same folder | Product owner. The tech lead is consulted when the product owner classes the change as higher risk. | Does the spec solve the stated problem? |
 | Build | `plan.md` in that same folder | Tech lead | Does the plan prove the change before any code? |
 | Test | Tests and evals in the same change | The engineer who reviews the pull request | Do the checks prove the plan? |
 | Deploy | The pull request | An engineer who did not write the change | Does the diff match the accepted plan, and do the checks pass? |
@@ -26,7 +26,7 @@ The author of an intent does not accept it. One person accepts each file. The ot
 ## Where files live
 
 - Each change: `changes/NNN-short-name/`. The capture-intent skill writes `intent.md` there.
-- `spec.md` and `plan.md` go in that same folder, only after the previous acceptance. Application code stays at the repo root.
+- The draft-spec skill writes `spec.md` in that same folder, only after the intent is on the default branch. `plan.md` joins only after the spec is accepted. Application code stays at the repo root.
 - Repo context for agents: `AGENTS.md` and `CLAUDE.md`.
 - Repeatable procedures: `.agents/skills/`.
 - Later, when they exist: `REVIEW.md` for review passes, `bands.yaml` for control bands.
@@ -43,7 +43,7 @@ Names below are the playbook's menu. The one-line note is how this repo uses eac
 
 ### Design
 
-- **Requirements and design.** The product owner does not write the spec. By hand, the product owner opens a session where the organization's skills are available, points at the accepted `intent.md`, names the constraints, and asks for flagged concerns. The agent writes `spec.md` beside that intent and stops. The product owner reviews it against the idea, resolves each flagged concern with its policy owner before engineering sees the spec, and decides whether it progresses to build. The tech lead is consulted when the organization classes the change as higher risk. Accepting the spec is what starts the plan. The same prompt is later an organization command. Only after that does merging `intent.md` start a job that opens `spec.md` as a pull request. That job does not exist until the hand pass has been codified. Policy belongs in skills, applied while the spec is written.
+- **Requirements and design.** The product owner does not write the spec. By hand, they open a session on an accepted intent and the draft-spec skill writes `spec.md` beside it, applies the policy skills that exist, flags concerns, and stops. The review-spec skill shows the exact lines. They resolve each flagged concern with its policy owner before engineering sees the spec. They consult the tech lead when they class the change as higher risk. Merging accepts the spec and lets the plan start. The change is not built yet. Closing the review rejects it. Only after this hand pass does merging `intent.md` start a job that runs draft-spec and opens `spec.md` as a pull request. That job does not exist yet. Policy belongs in skills, applied while the spec is written.
 
 ### Build
 
@@ -75,4 +75,4 @@ Names below are the playbook's menu. The one-line note is how this repo uses eac
 
 ## What an agent does next
 
-On a new idea, run capture-intent and stop. When the product owner asks to see intents, run list-intents and stop. When the product owner opens a session on an accepted intent and asks for the spec, draft `spec.md` from that file, apply the skills, flag concerns, and stop for their review. Do not draft a spec in the same turn as accepting the intent. Do not draft one because the intent merged, until a merge job exists. On an accepted spec with no plan, draft the plan and stop for the tech lead. On an accepted plan, implement only that plan.
+On a new idea, run capture-intent and stop. When the product owner asks to see intents, run list-intents and stop. When the product owner opens a session on an accepted intent and asks for the spec, run draft-spec and stop. When they review a spec, run review-spec and stop. Do not draft a spec in the same turn as accepting the intent. Do not draft one because the intent merged, until a merge job exists. On an accepted spec with no plan, draft the plan and stop for the tech lead. On an accepted plan, implement only that plan.
