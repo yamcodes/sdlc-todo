@@ -1,5 +1,6 @@
 # Intent: <short name>
 
+Author: <who described the idea>
 Status: draft
 
 ## Problem
@@ -14,4 +15,4 @@ Status: draft
 
 ## Decision
 
-Accepted or rejected, by whom, and the date. Maya Shah makes this call.
+Maya Shah accepts or rejects this, with the date.

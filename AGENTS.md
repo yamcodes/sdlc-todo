@@ -8,6 +8,10 @@ One product, one repo. Intent files live in `intent/`.
 - Leo Martins, tech lead. Accepts the technical risks in the spec, and the plan, before code.
 - Sam Okonkwo, Nora Berg, and Amir Haddad, engineers. One of them reviews a pull request only if they did not write the change.
 
+## Intent
+
+New ideas are written with the `capture-intent` skill in `.agents/skills/capture-intent/`. The draft stays `Status: draft` until Maya Shah accepts it.
+
 ## Before any application code
 
 Do not add application code, frameworks, or tests until both of these are true:

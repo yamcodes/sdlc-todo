@@ -20,8 +20,8 @@ Intent, spec, plan, and code live here. A second repo is for when one intent has
 
 ## What you do first
 
-1. Copy `intent/TEMPLATE.md` to a new file in `intent/`, named for the change.
-2. Fill it in as the person who has the idea.
+1. Describe the idea and ask for an intent. The `capture-intent` skill in `.agents/skills/capture-intent/` writes `intent/NNN-short-name.md` from `references/TEMPLATE.md`.
+2. The person who had the idea corrects anything the draft got wrong. It stays `Status: draft`.
 3. Maya accepts or rejects it. Record that at the bottom of the file, then commit.
 4. Only after that does an agent draft `spec.md`.
 5. Leo accepts a plan before any application code is written.
