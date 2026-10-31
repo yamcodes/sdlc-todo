@@ -1,6 +1,6 @@
 # sdlc-todo
 
-One product, one repo. Intent files live in `intent/`.
+One product, one repo. Each change lives in `changes/NNN-short-name/`, starting with `intent.md`. `spec.md` and `plan.md` join that folder after their gates. Application code stays at the repo root.
 
 ## Playbook
 

@@ -12,9 +12,9 @@ Work moves Plan, Design, Build, Test, Deploy, Maintain, then back to Plan. Each 
 
 | Stage | Artifact | Accepts | Question |
 | --- | --- | --- | --- |
-| Plan | `intent/NNN-short-name.md` | Maya Shah | Does this solve the right problem? |
-| Design | `spec.md` for that intent | Maya Shah on the product half. Leo Martins on the technical risks. | Does the spec solve the stated problem, and is it safe to build? |
-| Build | `plan.md` for that intent | Leo Martins | Does the plan prove the change before any code? |
+| Plan | `changes/NNN-short-name/intent.md` | Maya Shah | Does this solve the right problem? |
+| Design | `spec.md` in that same folder | Maya Shah on the product half. Leo Martins on the technical risks. | Does the spec solve the stated problem, and is it safe to build? |
+| Build | `plan.md` in that same folder | Leo Martins | Does the plan prove the change before any code? |
 | Test | Tests and evals in the same change | The engineer who reviews the pull request | Do the checks prove the plan? |
 | Deploy | The pull request | Sam Okonkwo, Nora Berg, or Amir Haddad, if they did not write the change | Does the diff match the accepted plan, and do the checks pass? |
 | Maintain | A new intent when a control band is breached | Maya Shah, same as any other intent | Is this finding worth a change? |
@@ -23,8 +23,8 @@ The author of an intent does not accept it. One person accepts each file. The ot
 
 ## Where files live
 
-- Intents: `intent/NNN-short-name.md`, drafted with `.agents/skills/capture-intent/`.
-- Specs and plans: next to the intent they come from, only after the previous acceptance.
+- Each change: `changes/NNN-short-name/`. The capture-intent skill writes `intent.md` there.
+- `spec.md` and `plan.md` go in that same folder, only after the previous acceptance. Application code stays at the repo root.
 - Repo context for agents: `AGENTS.md` and `CLAUDE.md`.
 - Repeatable procedures: `.agents/skills/`.
 - Later, when they exist: `REVIEW.md` for review passes, `bands.yaml` for control bands.

@@ -15,7 +15,7 @@ Do not put an author, a time, or a status in the file. The author and the time c
 ## Steps
 
 1. If the problem, outcome, users, or constraints are still vague, ask those questions first. Use the originator's words. The problem question is what they cannot do today. "It is missing" is not an answer.
-2. Choose the next free number and write `intent/NNN-short-name.md`.
+2. Choose the next free number and write `changes/NNN-short-name/intent.md`. That folder is the change. Do not add `spec.md` or `plan.md` there.
 3. Read [TEMPLATE.md](references/TEMPLATE.md) and fill it. Put anything unknown under Open questions. Do not invent it.
 4. Do not add an author line, a date, a decision, or a status.
 5. Stop. The originator corrects the file. The product owner reviews it with the `review-intent` skill. That skill shows the exact lines, asks them to accept or reject, then merges or closes the review.

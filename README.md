@@ -18,12 +18,12 @@ Maya and Leo both own the product. They accept different artifacts. One person a
 
 ## One repo
 
-Intent, spec, plan, and code live here. A second repo is for when one intent has to land in several products. This app is one product.
+Each change lives in `changes/NNN-short-name/`, starting with `intent.md`. `spec.md` and `plan.md` join that folder after their gates. Application code stays at the repo root. A second repo is for when one intent has to land in several products. This app is one product.
 
 ## What you do first
 
-1. Describe the idea and ask for an intent. The `capture-intent` skill in `.agents/skills/capture-intent/` writes `intent/NNN-short-name.md` from `references/TEMPLATE.md`.
+1. Describe the idea and ask for an intent. The `capture-intent` skill in `.agents/skills/capture-intent/` writes `changes/NNN-short-name/intent.md` from `references/TEMPLATE.md`.
 2. The person who had the idea corrects anything the draft got wrong. The author and the time come from git history. The file has no status field.
 3. Maya reviews the open pull request with the `review-intent` skill in `.agents/skills/review-intent/`. She writes her answers into the file. Merging accepts it. Closing the review rejects it.
-4. Only after that merge does an agent draft `spec.md`.
+4. Only after that merge does an agent draft `spec.md` in the same change folder.
 5. Leo accepts a plan before any application code is written.
