@@ -2,6 +2,8 @@
 
 A dummy TODO app for practicing the AI-native SDLC on one product. There is no application code yet. That is intentional.
 
+Working notes for the playbook live in `.agents/references/ai-native-sdlc.md`. `AGENTS.md` and `CLAUDE.md` point agents there. The official article stays at [The AI-native SDLC playbook](https://claude.com/resources/articles/the-ai-native-sdlc-playbook).
+
 ## People
 
 | Name | Role | Accepts | Question they answer |
@@ -21,7 +23,7 @@ Intent, spec, plan, and code live here. A second repo is for when one intent has
 ## What you do first
 
 1. Describe the idea and ask for an intent. The `capture-intent` skill in `.agents/skills/capture-intent/` writes `intent/NNN-short-name.md` from `references/TEMPLATE.md`.
-2. The person who had the idea corrects anything the draft got wrong. It stays `Status: draft`.
-3. Maya accepts or rejects it. Record that at the bottom of the file, then commit.
-4. Only after that does an agent draft `spec.md`.
+2. The person who had the idea corrects anything the draft got wrong. It stays `Status: draft`. The author and the time come from git history.
+3. Maya accepts by merging, or rejects by closing the review. Do not record that in the file.
+4. Only after that merge does an agent draft `spec.md`.
 5. Leo accepts a plan before any application code is written.

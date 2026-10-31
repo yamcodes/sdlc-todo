@@ -1,6 +1,5 @@
 # Intent: hello world
 
-Author: Leo Martins
 Status: draft
 
 ## Problem
@@ -23,7 +22,3 @@ Use the simplest way to get it done. Use a tech stack that is simple but still h
 
 - What does "see that it is working" mean: a page in a browser, a command that prints hello, or something else?
 - Which JavaScript or TypeScript stack, given it should be the simplest one that still holds up in 2026?
-
-## Decision
-
-Maya Shah accepts or rejects this, with the date.

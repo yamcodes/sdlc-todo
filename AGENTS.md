@@ -2,6 +2,14 @@
 
 One product, one repo. Intent files live in `intent/`.
 
+## Playbook
+
+Read `.agents/references/ai-native-sdlc.md` before fetching the AI-native SDLC playbook. That file is the working notes for this repo: stages, artifacts, and who accepts each one.
+
+## Playbook
+
+Read `.agents/references/ai-native-sdlc.md` before fetching the AI-native SDLC playbook. That file is the working notes for this repo: stages, artifacts, and who accepts each one.
+
 ## People
 
 - Maya Shah, product manager. Accepts the intent, and whether the spec solves the stated problem.
@@ -10,13 +18,13 @@ One product, one repo. Intent files live in `intent/`.
 
 ## Intent
 
-New ideas are written with the `capture-intent` skill in `.agents/skills/capture-intent/`. The draft stays `Status: draft` until Maya Shah accepts it.
+New ideas are written with the `capture-intent` skill in `.agents/skills/capture-intent/`. The file stays `Status: draft`. Maya Shah accepts it by merging, or rejects it by closing the review. The author and the time come from git history.
 
 ## Before any application code
 
 Do not add application code, frameworks, or tests until both of these are true:
 
-- An intent file in `intent/` has `Status: accepted` from Maya Shah.
+- Maya Shah has merged the intent. A closed review is a rejection.
 - A plan file exists and Leo Martins has accepted it.
 
 Until then, the only files to add are intent, spec, and plan markdown.
