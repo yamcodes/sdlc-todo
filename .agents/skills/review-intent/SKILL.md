@@ -25,10 +25,10 @@ The file has no status. Merging the review accepts the intent. Closing it reject
 6. When their product questions are answered, or they explicitly leave one open, show a multiple-choice prompt and wait. Use the AskQuestion tool when you have it. The choices are:
    - Accept and add it to the product
    - Reject and leave it a draft
-   - Not yet
+   - Don't decide yet
    A clear yes or no counts only after this prompt is on screen. Do not treat an earlier message as the pick.
 7. If they pick Accept: commit the intent file if this review changed it, push the branch, and merge it into `main`. If a pull request is already open for the branch, merge that. If none is open, open one into `main` and merge it in the same step. Tell them, in one plain sentence, that it is in the product, and include the link. Stop. Do not draft a spec.
 8. If they pick Reject: do not add a status. If a pull request is open, close it without merging. Tell them it stays a draft. Stop.
-9. If they pick Not yet, stop and keep reviewing.
+9. If they pick Don't decide yet, stop and keep reviewing. Nothing is merged, and the review stays open.
 
 Do not add an author, a date, a Decision section, or a status. Git history holds the author and the time. The merge or the closed review holds the decision.
