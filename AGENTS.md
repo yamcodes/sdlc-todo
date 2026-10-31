@@ -14,7 +14,7 @@ Read `.agents/references/ai-native-sdlc.md` before fetching the AI-native SDLC p
 
 ## Intent
 
-New ideas are written with the `capture-intent` skill in `.agents/skills/capture-intent/`. The file stays `Status: draft` until Maya Shah reviews it with the `review-intent` skill in `.agents/skills/review-intent/`. She writes her answers into the file, sets `Status: accepted`, and then merges. She rejects by closing the review and leaving `Status: draft`. The author and the time come from git history.
+New ideas are written with the `capture-intent` skill in `.agents/skills/capture-intent/`. Maya Shah reviews the file with the `review-intent` skill in `.agents/skills/review-intent/` and writes her answers into it. Merging accepts it. Closing the review rejects it. The author and the time come from git history. The file has no status field.
 
 ## Before any application code
 

@@ -1,7 +1,5 @@
 # Intent: hello world
 
-Status: accepted
-
 ## Problem
 
 We need to prove that a basic hello world runs before anyone builds the rest of the app.

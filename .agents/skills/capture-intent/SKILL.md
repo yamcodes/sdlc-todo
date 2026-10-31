@@ -8,17 +8,17 @@ description: >-
 
 # Capture intent
 
-Write one draft intent and leave `Status: draft`. Do not write a spec, a plan, or application code.
+Write one draft intent. Do not write a spec, a plan, or application code.
 
-Do not put an author or a time in the file. Both come from git history. Leave `Status: draft`. The product owner sets `Status: accepted` later, through the `review-intent` skill, and then merges. They reject by closing the review.
+Do not put an author, a time, or a status in the file. The author and the time come from git history. The product owner accepts by merging, through the `review-intent` skill. They reject by closing the review.
 
 ## Steps
 
 1. If the problem, outcome, users, or constraints are still vague, ask those questions first. Use the originator's words. The problem question is what they cannot do today. "It is missing" is not an answer.
 2. Choose the next free number and write `intent/NNN-short-name.md`.
 3. Read [TEMPLATE.md](references/TEMPLATE.md) and fill it. Put anything unknown under Open questions. Do not invent it.
-4. Set `Status: draft`. Leave it there. Do not add an author line, a decision, or `Status: accepted`.
-5. Stop. The originator corrects the file. The product owner reviews it with the `review-intent` skill. They set `Status: accepted` and merge, or they reject by closing the review and leaving `Status: draft`.
+4. Do not add an author line, a date, a decision, or a status.
+5. Stop. The originator corrects the file. The product owner reviews it with the `review-intent` skill, then merges to accept or closes the review to reject.
 
 ## Problem versus outcome
 
