@@ -1,9 +1,9 @@
 /**
  * Convert an HTML article to Markdown.
  *
- *   ./scripts/html-to-markdown article.html
- *   ./scripts/html-to-markdown https://example.com/post -o post.md
- *   cat article.html | ./scripts/html-to-markdown
+ *   ./scripts/html-to-markdown/html-to-markdown article.html
+ *   ./scripts/html-to-markdown/html-to-markdown https://example.com/post -o post.md
+ *   cat article.html | ./scripts/html-to-markdown/html-to-markdown
  *
  * A full page is extracted with Mozilla Readability, then converted with
  * Turndown (GitHub Flavored Markdown). A fragment is converted as-is.
