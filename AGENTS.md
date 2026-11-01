@@ -20,9 +20,9 @@ Design starts when Maya opens a session on an accepted intent and asks for the s
 
 New ideas are written with the `capture-intent` skill in `.agents/skills/capture-intent/`. When Maya Shah asks to see all intents, or all open intents, the `list-intents` skill in `.agents/skills/list-intents/` reads the pull requests and the default branch. She reviews one file with the `review-intent` skill in `.agents/skills/review-intent/` and writes her answers into it. Merging accepts it. Closing the review rejects it. The author and the time come from git history. The file has no status field.
 
-## Plan
+## Build
 
-An engineer picks up one accepted spec with the `tackle-spec` skill in `.agents/skills/tackle-spec/`. That skill switches this session to plan mode and does not change the default mode. The plan it shows is the text of `changes/NNN-short-name/plan.md`. Do not show a plan whose job is to create that file later. The engineer accepts a routine plan. Leo Martins accepts it only when the change is classed as higher risk. Acceptance saves that same text as the file and stops.
+An engineer picks up one accepted spec with the `build` skill in `.agents/skills/build/`. That skill switches this session to plan mode and does not change the default mode. The plan it shows is the text of `changes/NNN-short-name/plan.md`. Do not show a plan whose job is to create that file later. The engineer accepts a routine plan. Leo Martins accepts it only when the change is classed as higher risk. Acceptance saves that same text and commits it before any code. The same skill then writes the code, and updates `plan.md` in the same commit if the code departs from it.
 
 ## Before any application code
 
