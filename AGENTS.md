@@ -35,4 +35,6 @@ Until then, the only files to add are intent, spec, and plan markdown.
 
 ## Commands
 
-None yet. Add the build and test commands here once the app exists.
+- `pnpm dev`
+- `pnpm build`
+- `pnpm test`
