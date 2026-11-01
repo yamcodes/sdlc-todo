@@ -22,7 +22,7 @@ New ideas are written with the `capture-intent` skill in `.agents/skills/capture
 
 ## Plan
 
-An engineer plans a change with the `write-plan` skill in `.agents/skills/write-plan/`. The plan shown in Cursor plan mode or Claude plan mode is the text of `changes/NNN-short-name/plan.md`. Do not show a plan whose job is to create that file later. The engineer accepts a routine plan. Leo Martins accepts it only when the change is classed as higher risk. Acceptance saves that same text as the file and stops.
+An engineer picks up one accepted spec with the `tackle-spec` skill in `.agents/skills/tackle-spec/`. That skill switches this session to plan mode and does not change the default mode. The plan it shows is the text of `changes/NNN-short-name/plan.md`. Do not show a plan whose job is to create that file later. The engineer accepts a routine plan. Leo Martins accepts it only when the change is classed as higher risk. Acceptance saves that same text as the file and stops.
 
 ## Before any application code
 
