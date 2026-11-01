@@ -9,12 +9,12 @@ Working notes for the playbook live in `.agents/references/ai-native-sdlc.md`. `
 | Name | Role | Accepts | Question they answer |
 | --- | --- | --- | --- |
 | Maya Shah | Product manager | `intent.md`, then `spec.md` | Does this solve the right problem? |
-| Leo Martins | Tech lead | A spec Maya classes as higher risk, then `plan.md` | Is this higher-risk spec sound, and does the plan prove it? |
-| Sam Okonkwo | Engineer | A pull request he did not write | Does the diff match the accepted plan, and do the checks pass? |
-| Nora Berg | Engineer | A pull request she did not write | Does the diff match the accepted plan, and do the checks pass? |
-| Amir Haddad | Engineer | A pull request he did not write | Does the diff match the accepted plan, and do the checks pass? |
+| Leo Martins | Tech lead | A spec or plan classed as higher risk | Is this higher-risk change sound? |
+| Sam Okonkwo | Engineer | His own routine `plan.md`, and a pull request he did not write | Does his plan prove the change, and does someone else's diff match the accepted plan? |
+| Nora Berg | Engineer | Her own routine `plan.md`, and a pull request she did not write | Does her plan prove the change, and does someone else's diff match the accepted plan? |
+| Amir Haddad | Engineer | His own routine `plan.md`, and a pull request he did not write | Does his plan prove the change, and does someone else's diff match the accepted plan? |
 
-Maya owns the product decisions: the intent, and the spec. Leo accepts the plan, and she consults him only when she classes a spec as higher risk. One person accepts each file. The other can comment, and does not add a second approval on the same file.
+Maya owns the product decisions: the intent, and the spec. She consults Leo only when she classes a spec as higher risk. A routine plan stays with the engineer who wrote it. Leo accepts a plan only when the change is classed as higher risk. One person accepts each file. The other can comment, and does not add a second approval on the same file.
 
 The playbook's definitions are in `.agents/references/ai-native-sdlc.md`. On this team they map like this.
 
@@ -27,7 +27,7 @@ The playbook's definitions are in `.agents/references/ai-native-sdlc.md`. On thi
 | Policy owner | Nobody named yet |
 | Service owner | Nobody named yet |
 
-The playbook lets the engineer accept a routine plan, and sends a higher-risk plan to the technical lead. Here Leo accepts every plan.
+A routine plan stays with the engineer who wrote it. Leo accepts a plan only when the change is classed as higher risk.
 
 ## Who does what
 
@@ -38,7 +38,7 @@ flowchart TD
   spec[Agent writes spec.md]
   specOk[Maya accepts spec.md]
   plan[An engineer writes plan.md]
-  planOk[Leo accepts plan.md]
+  planOk[That engineer accepts a routine plan]
   code[That engineer writes the code]
   pr[Sam, Nora, or Amir accepts the pull request]
   again[A breach comes back to Maya as a new intent]
@@ -46,13 +46,13 @@ flowchart TD
   again --> idea
 ```
 
-Today Maya asks for the spec after she accepts the intent. Later, that merge starts the draft on its own, and her first look is the spec review. That job does not exist yet. Leo joins the spec only when she classes the change as higher risk.
+Today Maya asks for the spec after she accepts the intent. Later, that merge starts the draft on its own, and her first look is the spec review. That job does not exist yet. Leo joins a spec or a plan only when the change is classed as higher risk. The plan from the engineer's session is `plan.md`.
 
 | Step | Drafted by | Accepted by |
 | --- | --- | --- |
 | Plan | The person with the idea | Maya |
 | Design | The agent, from the accepted intent | Maya. Leo only if she classes it higher risk |
-| Build | An engineer writes `plan.md`, then the code | Leo, before any code |
+| Build | An engineer writes `plan.md`, then the code | That engineer, for a routine plan. Leo only when the change is classed as higher risk |
 | Test and Deploy | The pull request | Sam, Nora, or Amir, if they did not write the change |
 | Maintain | A breach, as a new intent | Maya, the same way as any other intent |
 
@@ -66,4 +66,4 @@ Each change lives in `changes/NNN-short-name/`, starting with `intent.md`. `spec
 2. The person who had the idea corrects anything the draft got wrong. The author and the time come from git history. The file has no status field.
 3. Maya asks to see all intents, or all open intents. The `list-intents` skill in `.agents/skills/list-intents/` reads the pull requests and the default branch. She reviews one file with the `review-intent` skill in `.agents/skills/review-intent/`. She writes her answers into the file. Merging accepts it. Closing the review rejects it.
 4. Maya opens a session on the accepted intent and asks for the spec. The `draft-spec` skill in `.agents/skills/draft-spec/` writes `changes/NNN-short-name/spec.md` and stops. She reviews that file with the `review-spec` skill in `.agents/skills/review-spec/`. She does not write it. Merging accepts it. Closing the review rejects it. Leo is consulted when she classes the change as higher risk. A merge-triggered spec job comes only after this hand pass.
-5. Leo accepts a plan before any application code is written.
+5. The engineer accepts their own routine plan before any application code is written. Leo accepts the plan only when the change is classed as higher risk. That session's plan is `plan.md`.
